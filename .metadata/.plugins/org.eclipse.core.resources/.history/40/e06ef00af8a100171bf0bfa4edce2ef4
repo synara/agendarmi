@@ -1,0 +1,14 @@
+import java.rmi.Naming;
+
+public class ClienteRMI {
+	public static void main(String [] args) {
+		
+		try {
+			IAgenda agenda 
+				= (IAgenda) Naming.lookup("//localhost:2020/AgendaServer");
+		} catch(Exception e) {
+			System.out.println("HelloClient exception: " + e.getMessage());
+			e.printStackTrace();
+		}
+	}
+}

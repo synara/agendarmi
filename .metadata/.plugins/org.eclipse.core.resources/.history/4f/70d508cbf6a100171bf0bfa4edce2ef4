@@ -1,0 +1,6 @@
+
+public class ServidorRMI {
+	public static void main(String[] args) {
+		
+	}
+}

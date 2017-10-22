@@ -1,0 +1,13 @@
+import java.rmi.registry.LocateRegistry;
+import java.time.LocalDate;
+
+public class ServidorRMI {
+	public static void main(String[] args) {
+		
+		try {
+			AgendaImpl agenda = new AgendaImpl();
+			LocateRegistry.createRegistry(2020);
+			LocateRegistry.rebind("//localhost:2020/AgendaServer", agenda);
+		}
+	}
+}

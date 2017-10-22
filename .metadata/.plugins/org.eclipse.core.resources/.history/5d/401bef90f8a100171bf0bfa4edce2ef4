@@ -1,0 +1,20 @@
+import java.rmi.Naming;
+
+public class ClienteRMI {
+	public static void main(String [] args) {
+		
+		try {
+			IAgenda agenda 
+				= (IAgenda) Naming.lookup("//localhost:2020/AgendaServer");
+			
+			Contato c1 = new Contato();
+			c1.setCod(1);
+			c1.setNome("Synara");
+			c1.setFone("85 86213111");
+			agenda.registrarContato(c1);
+		} catch(Exception e) {
+			System.out.println("HelloClient exception: " + e.getMessage());
+			e.printStackTrace();
+		}
+	}
+}

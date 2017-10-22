@@ -1,0 +1,7 @@
+import java.rmi.Remote;
+
+public interface IAgenda extends Remote {
+	void registrarContato(Contato contato);
+	Contato consultarContato(int codigo) throws Exception;
+	List<Contato> consultarContatos() throws RemoteException;
+}

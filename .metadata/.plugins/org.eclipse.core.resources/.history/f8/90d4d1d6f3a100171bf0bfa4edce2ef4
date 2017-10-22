@@ -1,0 +1,36 @@
+import java.rmi.RemoteException;
+import java.util.ArrayList;
+import java.util.List;
+
+public class AgendaImpl implements IAgenda {
+	
+	private ArrayList<Contato> contatos;
+	
+	public AgendaImpl() {
+		contatos = new ArrayList<>();
+	}
+
+	@Override
+	public void registrarContato(Contato contato) throws RemoteException {
+		
+		for(contato : contatos) {
+			
+		}
+		
+		contatos.add(contato);
+		
+	}
+
+	@Override
+	public Contato consultarContato(int codigo) throws RemoteException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Contato> consultarContatos() throws RemoteException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

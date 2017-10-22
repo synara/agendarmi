@@ -1,0 +1,10 @@
+
+public class ServidorRMI {
+	public static void main(String[] args) {
+		
+		try {
+			AgendaImpl agenda = new AgendaImpl();
+			
+		}
+	}
+}
